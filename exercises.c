@@ -82,6 +82,19 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List*L, int elem)
 {
+  int contador = 0;
+  int longitud = get_size(L);
+  for (int i = 0; i<longitud; i++)
+    {
+      if (L[i]== elem)
+      {
+        popFront(L);
+        contador++;
+        
+      }
+      
+    }
+  printf("La cantidad de elementos eliminados fue: %d", contador);
   
 }
 
