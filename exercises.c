@@ -60,7 +60,6 @@ retorne la suma de sus elementos.
 int sumaLista(List *L) 
 {
   int suma = 0;
-  List* L = create_list();
   for(int i=1; i<=10; i++)
     {
       int *dato = (int*)malloc(sizeof(int));
