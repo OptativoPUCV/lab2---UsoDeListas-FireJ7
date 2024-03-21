@@ -4,3 +4,16 @@ Thu 21 Mar 2024 04:03:24 PM UTC:
  tests:  1|4
 total_score: 10/70
 dfc4013
+Thu 21 Mar 2024 04:07:57 PM UTC: 
+ exercises.c | 17 +++++++++++++----
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:63:9: error: ‘L’ redeclared as different kind of symbol
+   63 |   List* L = create_list();
+      |         ^
+exercises.c:60:21: note: previous definition of ‘L’ with type ‘List *’
+   60 | int sumaLista(List *L)
+      |               ~~~~~~^
+Compilation failed
+ca08336
