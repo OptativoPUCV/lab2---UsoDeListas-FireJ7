@@ -65,9 +65,11 @@ int sumaLista(List *L)
     {
       int *dato = (int*)first(L);
       suma += *dato;
+      popFront(L);
     }
-    return suma;
+  return suma;
 }
+
 
 /*
 Ejercicio 3.
