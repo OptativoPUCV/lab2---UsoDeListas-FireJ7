@@ -52,3 +52,35 @@ exercises.c:65:16: error: cast to pointer from integer of different size [-Werro
 cc1: all warnings being treated as errors
 Compilation failed
 1a9beed
+Thu 21 Mar 2024 04:12:58 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:
+exercises.c: In function ‘sumaLista’:
+exercises.c:63:22: error: implicit declaration of function ‘len’ [-Werror=implicit-function-declaration]
+   63 |   for(int i = 0; i < len(L); i++)
+      |                      ^~~
+exercises.c:65:27: error: passing argument 1 of ‘getw’ from incompatible pointer type [-Werror=incompatible-pointer-types]
+   65 |       suma += *(int*)getw(L, i);
+      |                           ^
+      |                           |
+      |                           List *
+In file included from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdio.h:581:24: note: expected ‘FILE *’ but argument is of type ‘List *’
+  581 | extern int getw (FILE *__stream);
+      |                  ~~~~~~^~~~~~~~
+In file included from test.c:5:
+exercises.c:65:22: error: too many arguments to function ‘getw’
+   65 |       suma += *(int*)getw(L, i);
+      |                      ^~~~
+In file included from test.c:1:
+/nix/store/4pqv2mwdn88h7xvsm7a5zplrd8sxzvw0-glibc-2.35-163-dev/include/stdio.h:581:12: note: declared here
+  581 | extern int getw (FILE *__stream);
+      |            ^~~~
+In file included from test.c:5:
+exercises.c:65:16: error: cast to pointer from integer of different size [-Werror=int-to-pointer-cast]
+   65 |       suma += *(int*)getw(L, i);
+      |                ^
+cc1: all warnings being treated as errors
+Compilation failed
+732529f

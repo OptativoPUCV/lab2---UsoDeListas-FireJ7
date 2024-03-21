@@ -62,7 +62,7 @@ int sumaLista(List *L)
   int suma = 0;
   for(int i = 0; i < len(L); i++)
     {
-      suma += *(int*)get(L, i);
+      suma += *(int*)getw(L, i);
       
     }
     return suma;
