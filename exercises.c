@@ -82,7 +82,6 @@ posiciona en el elemento anterior.
 
 void eliminaElementos(List*L, int elem)
 {
-  int contador = 0;
   int longitud = get_size(L);
   for (int i = 0; i<longitud; i++)
     {
@@ -91,11 +90,18 @@ void eliminaElementos(List*L, int elem)
       {
         
         popFront(L);
-        contador++;
+        longitud--;
+        i--;
         
       }
+      else
+      {
+        popFront(L);
+      }
+      
       
     }
+  
   
 }
 
