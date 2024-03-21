@@ -86,15 +86,16 @@ void eliminaElementos(List*L, int elem)
   int longitud = get_size(L);
   for (int i = 0; i<longitud; i++)
     {
-      if (L[i]== elem)
+      int *dato = (int*)first(L);
+      if (*dato == elem)
       {
+        
         popFront(L);
         contador++;
         
       }
       
     }
-  printf("La cantidad de elementos eliminados fue: %d", contador);
   
 }
 
