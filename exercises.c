@@ -165,5 +165,5 @@ int parentesisBalanceados(char *cadena)
     return 1; // Los paréntesis están balanceados
   else
     return 0; // Más paréntesis de apertura que de cierre
-
+}
 
