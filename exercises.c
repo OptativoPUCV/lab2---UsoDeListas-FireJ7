@@ -147,22 +147,22 @@ int parentesisBalanceados(char *cadena)
     else if (cadena[i] == ')' || cadena[i] == ']' || cadena[i] == '}')
     {
       if (get_size(P1) == 0)
-        return 0; // More closing parentheses than opening parentheses
+        return 0;
 
       char* top_char = (char*)top(P1);
       char expected_char = (cadena[i] == ')') ? '(' : (cadena[i] == ']') ? '[' : '{';
 
       if (*top_char != expected_char)
       {
-        return 0; // Closing character without corresponding opening character
+        return 0;
       }
 
       pop(P1);
     }
   }
   if (get_size(P1) == 0)
-    return 1; // Balanced parentheses, square brackets, and curly braces
+    return 1; 
   else
-    return 0; // More opening characters than closing characters
+    return 0; 
 }
 
