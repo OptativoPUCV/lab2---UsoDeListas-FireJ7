@@ -151,13 +151,13 @@ int parentesisBalanceados(char *cadena)
         pop(P1);
       }
       else
-        return 0; // Unbalanced parentheses
+        return 0; // 
     }
   }
 
   if (get_size(P1) == 0)
-    return 1; // Balanced parentheses
+    return 1; 
   else
-    return 0; // Unbalanced parentheses
+    return 0; 
 }
 
