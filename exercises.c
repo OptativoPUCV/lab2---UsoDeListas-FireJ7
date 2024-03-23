@@ -116,13 +116,14 @@ void copia_pila(Stack* P1, Stack* P2)
       int *dato = (int*)first(P1);
       push(P3,dato);
       popFront(P1);
+    }
   for (int i = 0; i < get_size(P3); i++)
     {
       int *dato = (int*)first(P3);
       push(P2,dato);
       popFront(P3);
     }
-    }
+    
 }
 
 /*
